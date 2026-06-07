@@ -44,51 +44,100 @@ export default function EmpresasFamiliares() {
 
   return (
     <section ref={ref} className="w-full bg-white py-24 px-[6%]">
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
-        {/* Empresas Familiares */}
+      <div className="max-w-[1400px] mx-auto">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="mb-16"
         >
-          <h2 className="font-spartan font-black text-navy mb-10" style={{ fontSize: "clamp(32px,3.5vw,48px)", lineHeight: 1, letterSpacing: "-2px" }}>
-            Empresas familiares<br />no Brasil.
+          <span className="text-pink text-[12px] font-bold uppercase tracking-[2px] mb-4 block">Por que empresas familiares</span>
+          <h2
+            className="font-spartan font-black text-navy mb-6"
+            style={{ fontSize: "clamp(32px,4vw,54px)", lineHeight: 0.95, letterSpacing: "-2px" }}
+          >
+            O mercado que a axya escolheu<br className="hidden md:block" /> atender não foi por acaso.
           </h2>
-          {familiarStats.map((s) => (
-            <div key={s.label}>
-              <p className="text-navy font-semibold text-[15px] mb-1">{s.label}</p>
-              <ProgressBar pct={s.pct} animate={animated} />
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Setor de Serviços */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
-          <h2 className="font-spartan font-black text-navy mb-10" style={{ fontSize: "clamp(32px,3.5vw,48px)", lineHeight: 1, letterSpacing: "-2px" }}>
-            Setor de serviços<br />no Brasil.
-          </h2>
-          <div className="flex flex-col gap-6 mb-10">
-            {servicosStats.map((s) => (
-              <div key={s.label} className="bg-navy rounded-[24px] p-8 text-white">
-                <p className="text-white/70 text-[15px] font-medium mb-2">{s.label}</p>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-spartan font-black text-[48px] leading-none text-white">{s.value}</span>
-                  <span className="text-white/50 text-[14px]">{s.year}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="rounded-[24px] p-8 border border-navy/8">
-            <p className="font-spartan font-bold text-navy text-[22px] leading-tight">
-              O setor mais intensivo em <span className="text-pink">PESSOAS</span>, não em ativos físicos.
+          <div className="max-w-[820px]">
+            <p className="text-[#5d6878] text-[17px] leading-[1.85] mb-5">
+              Empresas familiares movem a economia brasileira, geram a maior parte dos empregos e carregam uma complexidade de gestão
+              que poucos entendem de verdade. No setor de serviços, essa complexidade é ainda maior: o principal ativo são pessoas,
+              a carga tributária é alta e o custo com folha pesa diretamente no caixa se não for bem gerenciado.
+            </p>
+            <p className="text-[#5d6878] text-[17px] leading-[1.85]">
+              A axya nasceu da vivência real nesse ambiente, combinada à experiência em multinacionais e startups de alta complexidade.
+              É essa somatória que nos permite levar para empresas familiares o nível de estrutura em gestão de pessoas que antes era
+              privilégio de grandes corporações, respeitando o que há de mais valioso na essência familiar:{" "}
+              <strong className="text-navy">proximidade, cultura e visão de longo prazo.</strong>
             </p>
           </div>
+        </motion.div>
+
+        {/* Stats grid */}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-start mb-16">
+          {/* Empresas Familiares */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="font-spartan font-black text-navy mb-10" style={{ fontSize: "clamp(26px,3vw,40px)", lineHeight: 1, letterSpacing: "-1.5px" }}>
+              Empresas familiares<br />no Brasil.
+            </h3>
+            {familiarStats.map((s) => (
+              <div key={s.label}>
+                <p className="text-navy font-semibold text-[15px] mb-1">{s.label}</p>
+                <ProgressBar pct={s.pct} animate={animated} />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Setor de Serviços */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <h3 className="font-spartan font-black text-navy mb-10" style={{ fontSize: "clamp(26px,3vw,40px)", lineHeight: 1, letterSpacing: "-1.5px" }}>
+              Setor de serviços<br />no Brasil.
+            </h3>
+            <div className="flex flex-col gap-6 mb-10">
+              {servicosStats.map((s) => (
+                <div key={s.label} className="bg-navy rounded-[24px] p-8 text-white">
+                  <p className="text-white/70 text-[15px] font-medium mb-2">{s.label}</p>
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-spartan font-black text-[48px] leading-none text-white">{s.value}</span>
+                    <span className="text-white/50 text-[14px]">{s.year}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-[24px] p-8 border border-navy/8">
+              <p className="font-spartan font-bold text-navy text-[22px] leading-tight">
+                O setor mais intensivo em <span className="text-pink">PESSOAS</span>, não em ativos físicos.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Closing line */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="rounded-[24px] px-10 py-8"
+          style={{ background: "rgba(0,24,50,0.04)", border: "1px solid rgba(0,24,50,0.07)" }}
+        >
+          <p className="text-[#5d6878] text-[16px] leading-[1.85]">
+            Esse é o mercado que a axya escolheu abraçar. Conhecemos os desafios da gestão familiar de perto.
+            E usamos esse conhecimento para transformar esses desafios em vantagem competitiva.
+          </p>
         </motion.div>
       </div>
     </section>

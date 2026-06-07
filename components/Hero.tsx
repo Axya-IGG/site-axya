@@ -6,10 +6,10 @@ const DIAG_LINK = "https://axyaigg.com.br/diagnostico-ppmf";
 
 const headlines = [
   "que reduz rotatividade.",
-  "que zera passivos\ntrabalhistas.",
   "que desenvolve lideranças.",
   "que aumenta produtividade.",
   "que profissionaliza operações.",
+  "que reduz passivos\ntrabalhistas.",
 ];
 
 export default function Hero() {
@@ -80,8 +80,8 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-[15px] leading-[1.7] text-[#52606f] max-w-[540px] mb-8">
-            A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços.{" "}
-            <strong>Menos improviso com gente. Mais clareza, método e resultado.</strong>
+            A axya ajuda empresas familiares do setor de serviços a parar de perder dinheiro por falta de gestão profissional de pessoas.{" "}
+            <strong>Menos improviso. Mais clareza, método e resultado.</strong>
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <a
@@ -111,7 +111,7 @@ export default function Hero() {
 
           {/* Credentials bar */}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            {["+30 anos de experiência combinada", "Metodologia PPMF", "Especialistas em empresas familiares"].map((c, i) => (
+            {["+30 anos de experiência combinada", "Método próprio", "Especialistas em empresas familiares"].map((c, i) => (
               <span key={i} className="flex items-center gap-2 text-[13px] text-[#5d6878] font-medium">
                 {i > 0 && <span className="w-1 h-1 rounded-full bg-pink inline-block" />}
                 {c}

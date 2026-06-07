@@ -2,7 +2,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const FORM_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20preencher%20uma%20aplica%C3%A7%C3%A3o.";
+const openForm = () => {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event("openLeadForm"));
+};
 
 const solucoes = [
   {
@@ -156,10 +158,8 @@ export default function Solucoes() {
             <p className="text-white font-spartan font-bold text-[22px] mb-1">Pronto para dar o próximo passo?</p>
             <p className="text-white/65 text-[15px]">Preencha a aplicação e entraremos em contato para entender sua realidade.</p>
           </div>
-          <a
-            href={FORM_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={openForm}
             className="flex-shrink-0 px-8 py-4 rounded-[16px] font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
             style={{
               background: "linear-gradient(#001832,#001832) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box",
@@ -167,18 +167,18 @@ export default function Solucoes() {
               color: "#ffffff",
             }}
             onMouseEnter={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
+              const el = e.currentTarget as HTMLButtonElement;
               el.style.background = "linear-gradient(135deg,#08d8ff,#f62982) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
               el.style.boxShadow = "0 12px 35px rgba(8,216,255,0.30)";
             }}
             onMouseLeave={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
+              const el = e.currentTarget as HTMLButtonElement;
               el.style.background = "linear-gradient(#001832,#001832) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
               el.style.boxShadow = "none";
             }}
           >
-            Preencher aplicação
-          </a>
+            Solicitar contato
+          </button>
         </motion.div>
       </div>
     </section>

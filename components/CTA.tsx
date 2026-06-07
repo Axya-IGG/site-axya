@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 
-const FORM_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20preencher%20uma%20aplica%C3%A7%C3%A3o.";
+const openForm = () => {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event("openLeadForm"));
+};
 
 export default function CTA() {
   return (
@@ -37,7 +39,7 @@ export default function CTA() {
         >
           <span className="inline-flex items-center gap-3 mb-6 text-pink text-[14px] font-bold uppercase tracking-[2px]">
             <span className="w-[42px] h-0.5 bg-pink inline-block" />
-            Estruture seu crescimento
+            O próximo passo é seu
           </span>
           <h2
             className="font-spartan font-black text-white"
@@ -55,15 +57,12 @@ export default function CTA() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="flex justify-end md:justify-end"
         >
-          <a
-            href={FORM_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative w-full max-w-[520px] min-h-[320px] rounded-[40px] p-[42px] flex flex-col justify-between overflow-hidden text-decoration-none transition-all duration-[450ms] hover:-translate-y-2 group"
+          <button
+            onClick={openForm}
+            className="relative w-full max-w-[520px] min-h-[320px] rounded-[40px] p-[42px] flex flex-col justify-between overflow-hidden transition-all duration-[450ms] hover:-translate-y-2 group text-left"
             style={{
               background: "linear-gradient(145deg, #f62982 0%, #ff4d9f 100%)",
               boxShadow: "0 35px 90px rgba(246,41,130,.28)",
-              textDecoration: "none",
             }}
           >
             {/* Glow orb */}
@@ -74,10 +73,6 @@ export default function CTA() {
                 background: "radial-gradient(circle, rgba(255,255,255,.10), transparent 70%)",
               }}
             />
-
-            <span className="relative z-10 text-[13px] uppercase tracking-[2px] font-bold text-white/78">
-              Solicitar contato
-            </span>
 
             <span className="relative z-10 font-spartan font-black text-white" style={{ fontSize: "clamp(30px,4vw,50px)", lineHeight: 0.95, letterSpacing: "-2px", maxWidth: 360 }}>
               Quero estruturar minha empresa
@@ -92,7 +87,7 @@ export default function CTA() {
                 →
               </span>
             </div>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

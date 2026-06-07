@@ -13,6 +13,7 @@ import Resultados from "@/components/Resultados";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import FormPopup from "@/components/FormPopup";
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-
       <WhatsAppFloat />
+      <FormPopup />
     </>
   );
 }

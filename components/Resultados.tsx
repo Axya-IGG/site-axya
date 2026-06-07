@@ -6,7 +6,7 @@ const cards = [
     eyebrow: "Rotatividade",
     stat: "1 a 2%",
     label: "de turnover ao ano",
-    desc: "A média ideal de mercado é de 5 a 10%. Empresas com gestão estruturada de pessoas ficam bem abaixo disso. Repor um colaborador pode custar até 200% do salário anual do cargo. Reduzir rotatividade é reduzir um dos maiores custos invisíveis do negócio.",
+    desc: "A média de mercado considerada ideal é de 5 a 10%. Empresas com gestão estruturada de pessoas são capazes de ficar abaixo disso. Repor um colaborador pode custar até 200% do salário anual do cargo. Reduzir rotatividade é reduzir um dos maiores custos invisíveis do negócio.",
     topGrad: "linear-gradient(90deg,#08d8ff,#f62982)",
     statGrad: "linear-gradient(135deg,#08d8ff,#f62982)",
   },
@@ -14,7 +14,7 @@ const cards = [
     eyebrow: "Produtividade",
     stat: "R$1.636.363",
     label: "de faturamento por colaborador",
-    desc: "Resultado de uma empresa com 55 funcionários e faturamento de R$90MM ao ano. Quando pessoas, processos e liderança funcionam juntos, cada colaborador passa a gerar mais valor. O crescimento deixa de depender de contratar mais e começa a depender de gerir melhor.",
+    desc: "Resultado de uma empresa familiar com apenas 55 funcionários. Quando pessoas, processos e liderança funcionam juntos, cada colaborador passa a gerar mais valor. O crescimento deixa de depender de contratar mais e começa a depender de gerir melhor.",
     topGrad: "linear-gradient(90deg,#f62982,#08d8ff)",
     statGrad: "linear-gradient(135deg,#f62982,#08d8ff)",
   },
@@ -22,7 +22,7 @@ const cards = [
     eyebrow: "Passivo Trabalhista",
     stat: "100%",
     label: "de redução do passivo trabalhista",
-    desc: "Ações trabalhistas não nascem de má-fé. Nascem de processos frágeis, documentação precária e gestão sem critério. Com estrutura e método, o passivo deixa de crescer e passa a ser gerido antes de virar problema.",
+    desc: "Processos frágeis, documentação precária e gestão sem critério são o terreno fértil para ações trabalhistas. O passivo trabalhista não aparece do nada: ele se acumula silenciosamente enquanto a empresa opera no improviso. Com método, trabalho preventivo e comprometimento, é possível zerar esse passivo e manter o negócio protegido de custos financeiros altíssimos.",
     topGrad: "linear-gradient(90deg,#5b1c45,#f62982)",
     statGrad: "linear-gradient(135deg,#f62982,#ff9ed4)",
   },
@@ -51,7 +51,7 @@ export default function Resultados() {
           className="text-center mb-16"
         >
           <span className="text-pink text-[12px] font-bold uppercase tracking-[2px] mb-4 block">
-            Gestão de pessoas como motor de resultados
+            Resultados reais. Cliente real.
           </span>
           <h2
             className="font-spartan font-black text-white mb-5"
@@ -60,7 +60,7 @@ export default function Resultados() {
             O que muda quando a gestão de pessoas<br className="hidden md:block" /> para de ser improviso.
           </h2>
           <p className="text-white/65 text-[16px] leading-[1.8] max-w-[680px] mx-auto">
-            Não é promessa. São resultados reais de empresas que decidiram parar de perder dinheiro com gente.
+            Não é promessa. É o que aconteceu em uma das empresas que decidiu transformar gestão de pessoas em motor de resultados.
           </p>
         </motion.div>
 

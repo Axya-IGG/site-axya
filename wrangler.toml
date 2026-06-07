@@ -1,0 +1,7 @@
+name = "site-axya"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "out"
+
+[[kv_namespaces]]
+binding = "LEADS_KV"
+id = "2142ab59133a4aa5a0b9d9b36c2f6d8c"

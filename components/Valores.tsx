@@ -6,25 +6,25 @@ const valores = [
     letter: "V",
     color: "#7d7d81",
     title: "VERDADE",
-    text: "Tudo que fazemos gira em torno da verdade. Analisamos fatos antes de opiniões e encaramos a realidade como ela é.",
+    text: "Analisamos a realidade como ela é, não como gostaríamos que fosse. Todo diagnóstico, toda recomendação e toda decisão começa pelos fatos.",
   },
   {
     letter: "C",
     color: "#001832",
     title: "CORAGEM",
-    text: "Saber não basta. É preciso agir. Dizemos o que precisa ser dito e fazemos o que precisa ser feito.",
+    text: "Saber não basta. É preciso agir. Dizemos o que precisa ser dito, mesmo quando é difícil, e fazemos o que precisa ser feito, mesmo quando é desconfortável.",
   },
   {
     letter: "C",
     color: "#08d8ff",
     title: "CLAREZA",
-    text: "Transformamos complexidade em caminhos objetivos, possíveis e compreensíveis, sem jargões e sem rodeios.",
+    text: "Complexidade não impressiona ninguém. O que transforma é a capacidade de traduzir o problema em caminho objetivo, sem jargão e sem rodeio.",
   },
   {
     letter: "R",
     color: "#f62982",
-    title: "RESULTADO",
-    text: "Resultado só vale se sustentar. Construímos estruturas que sustentam crescimento no longo prazo.",
+    title: "RESULTADO SUSTENTÁVEL",
+    text: "Resultado que não se sustenta não é resultado. Construímos estruturas que o negócio consegue manter e evoluir, sem depender de soluções provisórias.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Valores() {
             className="font-spartan font-black text-navy max-w-[780px] mx-auto"
             style={{ fontSize: "clamp(32px,4vw,54px)", lineHeight: 0.95, letterSpacing: "-3px" }}
           >
-            O que sustenta<br />cada decisão da Axya.
+            O que sustenta<br />cada decisão da axya.
           </h2>
         </motion.div>
 

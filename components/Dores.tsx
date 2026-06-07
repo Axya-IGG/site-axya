@@ -17,13 +17,13 @@ export default function Dores() {
           className="text-center flex flex-col gap-3 px-4 md:px-0"
         >
           <span className="text-white/65 text-[18px] md:text-[22px] font-light">
-            Empresas não travam apenas por<br className="md:hidden" /> falta de estratégia.
+            Empresas familiares não travam<br className="md:hidden" /> por falta de esforço.
           </span>
           <strong
             className="font-spartan font-black text-white"
             style={{ fontSize: "clamp(32px,4vw,52px)", lineHeight: 1.05, letterSpacing: "-2px" }}
           >
-            Travam por falta de<br className="md:hidden" /> estrutura humana.
+            Travam por falta de estrutura<br className="md:hidden" /> em gestão de pessoas.
           </strong>
         </motion.div>
       </div>

@@ -5,16 +5,16 @@ const pessoas = [
   {
     nome: "Luciana Splicigo",
     photo: "/luciana.png",
-    cargo: "Cofundadora da axya · Especialista em Gestão de Pessoas e Desenvolvimento de Lideranças",
-    bio: "Mais de 20 anos de carreira em RH. Passou por empresas familiares, holdings e multinacionais como DHL e Edições Globo Condé Nast (editora dos títulos Vogue, Casa Vogue, GQ e Glamour). Coach pela SBC. Especialista em transformar RH operacional em RH Alta Performance, conectando gestão de pessoas a resultados reais de negócio.",
-    credenciais: ["+20 anos de experiência", "DHL", "Ex executiva de RH da Edições Globo Condé Nast", "Coach pela SBC", "Cocriadora do Método PPMF"],
+    cargo: "Sócia-Cofundadora da axya · Especialista em Gestão de Pessoas, Implantação de RH e Desenvolvimento de Lideranças",
+    bio: "Mais de 20 anos dentro de empresas. Empresas familiares, holdings, multinacionais. Viu de perto o mesmo padrão se repetir: negócios com potencial real, travados por falta de estrutura em gestão de pessoas. Líderes promovidos sem preparo. Times sem direção. RH operacional demais para fazer a diferença onde importa.\n\nFoi essa repetição que deu origem à convicção que orienta o trabalho dela até hoje: gestão de pessoas não é suporte ao negócio. É o que faz o negócio funcionar ou travar.\n\nNa axya, Luciana é responsável pela frente de gestão de pessoas e desenvolvimento organizacional. Leva para empresas familiares do setor de serviços o mesmo nível de estrutura que viveu em ambientes de alta complexidade, como DHL e Edições Globo Condé Nast, sem perder de vista a realidade e a cultura de cada negócio.",
+    credenciais: ["+20 anos de experiência", "Ex-executiva de RH Edições Globo (Vogue, Casa Vogue, GQ, Glamour)", "Coach pela SBC", "Cocriadora do Método PPMF"],
   },
   {
     nome: "Kathleen Amaro",
     photo: "/kathleen.png",
-    cargo: "Cofundadora da axya · Especialista em Estratégia Organizacional, Gestão de Projetos e Estruturação de Processos",
-    bio: "Mais de 10 anos de carreira. Passou por empresas familiares, multinacionais e startups, entre elas Edições Globo Condé Nast (editora dos títulos Vogue, Casa Vogue, GQ e Glamour) e Quero Educação. MBA em Consultoria Empresarial. Cocriadora do Método PPMF. Especialista em traduzir estratégia em processos aplicáveis, do diagnóstico à execução.",
-    credenciais: ["+10 anos de experiência", "Globo Condé Nast", "Quero Educação", "Cocriadora do Método PPMF"],
+    cargo: "Sócia Cofundadora da axya · Consultora em Estratégia Organizacional e Estruturação de Processos",
+    bio: "Formada em Gestão, pós-graduada em consultoria empresarial e mais de 10 anos transitando entre empresas familiares, multinacionais e startups. Em cada ambiente que passou, o mesmo ponto de atenção: negócios que cresciam sem estrutura, decisões sobre pessoas tomadas no improviso e processos que dependiam de quem estava presente no dia.\n\nEssa vivência, somada à passagem por ambientes de alta complexidade como Edições Globo Condé Nast e Quero Educação, construiu uma visão que vai além do RH. Gestão de pessoas, processos, cultura e resultado financeiro são partes de uma mesma engrenagem. Quando uma trava, as outras sentem.\n\nNa axya, Kathleen é responsável pela frente de processos, projetos e estruturação. Traduz diagnóstico em plano de ação, e plano de ação em execução real. Também é empresária, e carrega esse olhar em cada projeto: sabe exatamente o que custa tomar decisões erradas.",
+    credenciais: ["+10 anos de experiência", "Edições Globo Condé Nast", "Quero Educação", "New Age Tour Operator", "Cocriadora do Método PPMF"],
   },
 ];
 
@@ -85,7 +85,11 @@ export default function Bios() {
               <div className="h-px" style={{ background: "rgba(0,24,50,0.07)" }} />
 
               {/* Bio */}
-              <p className="text-[#5d6878] text-[15px] leading-[1.9]">{p.bio}</p>
+              <div className="flex flex-col gap-4">
+                {p.bio.split("\n\n").map((para, j) => (
+                  <p key={j} className="text-[#5d6878] text-[15px] leading-[1.9]">{para}</p>
+                ))}
+              </div>
 
               {/* Credenciais */}
               <div className="flex flex-wrap gap-2">
