@@ -6,10 +6,9 @@ import Pilares from "@/components/Pilares";
 import Bios from "@/components/Bios";
 import MarcasParceiras from "@/components/MarcasParceiras";
 import EmpresasFamiliares from "@/components/EmpresasFamiliares";
-import Dores from "@/components/Dores";
-import Valores from "@/components/Valores";
-import Depoimentos from "@/components/Depoimentos";
 import Resultados from "@/components/Resultados";
+import Depoimentos from "@/components/Depoimentos";
+import Valores from "@/components/Valores";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -27,10 +26,9 @@ export default function Home() {
         <Bios />
         <MarcasParceiras />
         <EmpresasFamiliares />
-        <Dores />
-        <Valores />
-        <Depoimentos />
         <Resultados />
+        <Depoimentos />
+        <Valores />
         <CTA />
       </main>
       <Footer />

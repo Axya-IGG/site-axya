@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   description:
     "A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços. Menos improviso com gente. Mais clareza, método e resultado.",
   icons: {
-    icon: "https://axyaigg.com.br/wp-content/uploads/2025/10/cropped-cropped-X-Padrao-scaled-2-32x32.png",
+    icon: "/favicon-axya.png",
   },
   openGraph: {
     title: "axya — Inteligência em Gente e Gestão",
     description:
       "A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços. Menos improviso com gente. Mais clareza, método e resultado.",
-    url: "https://lp.axyaigg.com.br",
+    url: "https://axyaigg.com.br",
     siteName: "axya",
     type: "website",
     locale: "pt_BR",

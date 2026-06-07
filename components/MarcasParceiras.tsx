@@ -2,14 +2,14 @@
 import { motion } from "framer-motion";
 
 const parceiros = [
-  "AR&D",
-  "Bufunffa",
-  "Convenia",
-  "Nogueira Oliveira & Correali",
-  "Support Segma",
-  "S8Vox",
-  "IEF",
-  "Unixs",
+  { nome: "AR&D Assessoria",              src: "/ard-assessoria.png"    },
+  { nome: "Bufunffa",                     src: "/bufunffa.png"          },
+  { nome: "Convenia",                     src: "/convenia.png"          },
+  { nome: "Nogueira Oliveira & Correali", src: "/nogueira-oliveira.png" },
+  { nome: "Support Segma",               src: "/support-segma.png"     },
+  { nome: "S8Vox",                        src: "/s8-vox.png"            },
+  { nome: "IEF",                          src: "/ief.png"               },
+  { nome: "Unixs",                        src: "/unixs.png"             },
 ];
 
 export default function MarcasParceiras() {
@@ -30,25 +30,25 @@ export default function MarcasParceiras() {
           Marcas parceiras
         </motion.p>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-          {parceiros.map((nome, i) => (
-            <motion.span
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+          {parceiros.map((p, i) => (
+            <motion.img
               key={i}
+              src={p.src}
+              alt={p.nome}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="font-spartan font-bold text-[17px] transition-colors duration-300 cursor-default select-none"
-              style={{ color: "rgba(0,24,50,0.28)" }}
+              className="w-auto object-contain transition-all duration-300"
+              style={{ height: 60, filter: "grayscale(100%) opacity(0.75)" }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLSpanElement).style.color = "#001832";
+                (e.currentTarget as HTMLImageElement).style.filter = "grayscale(0%) opacity(1)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLSpanElement).style.color = "rgba(0,24,50,0.28)";
+                (e.currentTarget as HTMLImageElement).style.filter = "grayscale(100%) opacity(0.75)";
               }}
-            >
-              {nome}
-            </motion.span>
+            />
           ))}
         </div>
       </div>

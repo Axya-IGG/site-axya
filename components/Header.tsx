@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 const WA_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20para%20empresas.";
 
@@ -44,14 +43,15 @@ export default function Header() {
     >
       <div className="flex items-center justify-between px-[5%] py-5 max-w-[1600px] mx-auto">
         {/* Logo */}
-        <a href="#home">
-          <Image
-            src="https://axyaigg.com.br/wp-content/uploads/2026/05/Site-Logo-663-x-123-px-1.png"
-            alt="Axya IGG"
-            width={180}
-            height={40}
-            style={{ height: 48, width: "auto" }}
-            unoptimized
+        <a href="#home" onClick={handleHomeClick}>
+          <img
+            src="/Logo-Axya-vetor-sem-escrita-padrão.png"
+            alt="axya"
+            style={{
+              height: scrolled ? 48 : 72,
+              width: "auto",
+              transition: "height 0.3s ease",
+            }}
           />
         </a>
 

@@ -85,7 +85,11 @@ export default function FormPopup() {
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
+      document.documentElement.style.scrollBehavior = "auto";
       window.scrollTo(0, savedScroll.current);
+      requestAnimationFrame(() => {
+        document.documentElement.style.scrollBehavior = "";
+      });
     }
     return () => {
       document.body.style.overflow = "";
@@ -135,7 +139,7 @@ export default function FormPopup() {
           style={{
             position: "fixed",
             inset: 0,
-            zIndex: 999,
+            zIndex: 10000,
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "center",

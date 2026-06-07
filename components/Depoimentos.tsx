@@ -8,7 +8,7 @@ const depoimentos = [
     destaque: "Recomendo com total confiança",
     textoPos: " — quem contar com o trabalho delas estará em excelentes mãos.",
     nome: "Carla Davidovich",
-    foto: "/carla.jpg",
+    foto: "/carla.jpg.jpeg",
     iniciais: "C",
   },
   {
@@ -17,7 +17,7 @@ const depoimentos = [
     destaque: "Tenho total segurança em recomendar o trabalho delas",
     textoPos: ".",
     nome: "Marcelo Cusnir",
-    foto: "/marcelo.jpg",
+    foto: "/marcelo.jpg.jpeg",
     iniciais: "M",
   },
   {
@@ -26,7 +26,7 @@ const depoimentos = [
     destaque: "Recomendo seu trabalho com total confiança",
     textoPos: ".",
     nome: "Ingrid Davidovich",
-    foto: "/ingrid.jpg",
+    foto: "/ingrid.jpg.jpeg",
     iniciais: "I",
   },
 ];
