@@ -5,10 +5,10 @@ import Solucoes from "@/components/Solucoes";
 import Pilares from "@/components/Pilares";
 import Bios from "@/components/Bios";
 import MarcasParceiras from "@/components/MarcasParceiras";
-import Estrutura from "@/components/Estrutura";
 import EmpresasFamiliares from "@/components/EmpresasFamiliares";
 import Dores from "@/components/Dores";
 import Valores from "@/components/Valores";
+import Depoimentos from "@/components/Depoimentos";
 import Resultados from "@/components/Resultados";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -25,10 +25,10 @@ export default function Home() {
         <Pilares />
         <Bios />
         <MarcasParceiras />
-        <Estrutura />
         <EmpresasFamiliares />
         <Dores />
         <Valores />
+        <Depoimentos />
         <Resultados />
         <CTA />
       </main>
