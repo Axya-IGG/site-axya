@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WA_DIAG = "https://wa.me/5512997205261?text=Quero%20iniciar%20meu%20Diagn%C3%B3stico%20PPMF.";
+const DIAG_LINK = "https://axyaigg.com.br/diagnostico-ppmf";
 
 const pilares = [
   {
@@ -168,7 +168,7 @@ export default function Pilares() {
             </p>
           </div>
           <a
-            href={WA_DIAG}
+            href={DIAG_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 px-8 py-5 rounded-[18px] bg-white text-navy font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"

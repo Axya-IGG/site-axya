@@ -5,6 +5,7 @@ import Solucoes from "@/components/Solucoes";
 import Pilares from "@/components/Pilares";
 import Estrutura from "@/components/Estrutura";
 import EmpresasFamiliares from "@/components/EmpresasFamiliares";
+import Bios from "@/components/Bios";
 import Dores from "@/components/Dores";
 import Valores from "@/components/Valores";
 import CTA from "@/components/CTA";
@@ -20,6 +21,7 @@ export default function Home() {
         <StatsBanner />
         <Solucoes />
         <Pilares />
+        <Bios />
         <Estrutura />
         <EmpresasFamiliares />
         <Dores />

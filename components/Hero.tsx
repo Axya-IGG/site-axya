@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const WA_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20para%20empresas.";
+const DIAG_LINK = "https://axyaigg.com.br/diagnostico-ppmf";
 
 const headlines = [
   "que reduz rotatividade.",
@@ -34,8 +34,8 @@ export default function Hero() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
-        className="hidden md:block absolute right-0 top-0 bottom-0"
-        style={{ width: "50%" }}
+        className="hidden md:block absolute right-0 bottom-0"
+        style={{ width: "50%", top: 80 }}
       >
         <img
           src="/home-axya.png"
@@ -83,7 +83,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
             <a
-              href={WA_LINK}
+              href={DIAG_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="px-[30px] py-[17px] rounded-2xl bg-navy text-white text-[14px] font-semibold transition-all duration-300 hover:-translate-y-1"
