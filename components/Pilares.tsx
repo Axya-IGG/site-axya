@@ -132,16 +132,38 @@ export default function Pilares() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mx-[5%] mb-16 rounded-[28px] px-10 md:px-16 py-12 text-center"
-        style={{ background: "rgba(8,216,255,0.05)", border: "1px solid rgba(8,216,255,0.12)" }}
+        className="mx-[5%] mb-16 rounded-[32px] overflow-hidden flex flex-col md:flex-row"
+        style={{ background: "#ffffff", boxShadow: "0 20px 60px rgba(0,0,0,0.25)" }}
       >
-        <p className="text-white/80 text-[18px] leading-[1.85] max-w-[820px] mx-auto">
-          <span className="text-cyan font-bold text-[20px]">36 critérios</span> distribuídos nos quatro pilares.
-          Cada um expõe um custo que a empresa ainda não consegue ver, mas já está pagando.
-        </p>
-        <p className="text-white/55 text-[16px] mt-4">
-          Saber em qual pilar está o problema, com qual gravidade e por onde começar: isso é o que o Diagnóstico PPMF faz.
-        </p>
+        {/* Lado esquerdo — número destaque */}
+        <div
+          className="flex flex-col items-center justify-center px-12 py-12 flex-shrink-0 md:w-[280px]"
+          style={{ background: "linear-gradient(155deg,#001832 0%,#0b2444 45%,#5b1c45 100%)" }}
+        >
+          <span
+            className="font-spartan font-black leading-none"
+            style={{
+              fontSize: "clamp(72px,8vw,110px)",
+              background: "linear-gradient(135deg,#08d8ff,#f62982)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            36
+          </span>
+          <span className="text-white/60 text-[13px] font-semibold uppercase tracking-[2px] mt-1">critérios</span>
+        </div>
+
+        {/* Lado direito — texto */}
+        <div className="flex flex-col justify-center px-10 py-12 gap-4">
+          <p className="text-navy text-[18px] leading-[1.85] font-medium">
+            Distribuídos nos quatro pilares, cada critério expõe um custo que a empresa ainda não consegue ver,
+            mas já está pagando.
+          </p>
+          <p className="text-[#5d6878] text-[16px] leading-[1.85]">
+            Saber em qual pilar está o problema, com qual gravidade e por onde começar: isso é o que o Diagnóstico PPMF faz.
+          </p>
+        </div>
       </motion.div>
 
       {/* ── Card do Diagnóstico PPMF ── */}
@@ -171,7 +193,20 @@ export default function Pilares() {
             href={DIAG_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 px-8 py-5 rounded-[18px] bg-white text-navy font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl whitespace-nowrap"
+            className="flex-shrink-0 px-8 py-5 rounded-[18px] font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
+            style={{ background: "#ffffff", color: "#001832" }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "linear-gradient(135deg,#f62982 0%,#08d8ff 100%)";
+              el.style.color = "#ffffff";
+              el.style.boxShadow = "0 12px 35px rgba(246,41,130,0.35)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "#ffffff";
+              el.style.color = "#001832";
+              el.style.boxShadow = "none";
+            }}
           >
             Iniciar meu diagnóstico
           </a>

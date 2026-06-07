@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 const pessoas = [
   {
     nome: "Luciana Splicigo",
+    photo: "/luciana.png",
     cargo: "Cofundadora da axya · Especialista em Gestão de Pessoas e Desenvolvimento de Lideranças",
     bio: "Mais de 20 anos de carreira em RH. Passou por empresas familiares, holdings e multinacionais como DHL e Edições Globo Condé Nast (editora dos títulos Vogue, Casa Vogue, GQ e Glamour). Coach pela SBC. Especialista em transformar RH operacional em RH Alta Performance, conectando gestão de pessoas a resultados reais de negócio.",
     credenciais: ["+20 anos de experiência", "DHL", "Edições Globo Condé Nast", "Coach pela SBC", "Cocriadora do Método PPMF"],
-    inicial: "L",
   },
   {
     nome: "Kathleen Amaro",
+    photo: "/kathleen.png",
     cargo: "Cofundadora da axya · Especialista em Estratégia Organizacional, Gestão de Projetos e Estruturação de Processos",
     bio: "Mais de 10 anos de carreira. Passou por empresas familiares, multinacionais e startups, entre elas Edições Globo Condé Nast (editora dos títulos Vogue, Casa Vogue, GQ e Glamour) e Quero Educação. MBA em Consultoria Empresarial. Cocriadora do Método PPMF. Especialista em traduzir estratégia em processos aplicáveis, do diagnóstico à execução.",
     credenciais: ["+10 anos de experiência", "Globo Condé Nast", "Quero Educação", "Cocriadora do Método PPMF"],
-    inicial: "K",
   },
 ];
 
@@ -57,14 +57,14 @@ export default function Bios() {
               className="rounded-[28px] p-10 flex flex-col gap-6"
               style={{ background: "#fafbff", border: "1px solid rgba(0,24,50,0.07)" }}
             >
-              {/* Avatar + nome */}
+              {/* Foto + nome */}
               <div className="flex items-center gap-5">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 font-spartan font-black text-white text-[26px]"
-                  style={{ background: "linear-gradient(135deg,#001832 0%,#5b1c45 60%,#f62982 100%)" }}
-                >
-                  {p.inicial}
-                </div>
+                <img
+                  src={p.photo}
+                  alt={p.nome}
+                  className="flex-shrink-0 rounded-full object-cover"
+                  style={{ width: 100, height: 100, border: "3px solid rgba(246,41,130,0.20)" }}
+                />
                 <div>
                   <p className="font-spartan font-bold text-navy text-[20px] leading-tight">{p.nome}</p>
                   <p className="text-pink text-[12px] font-semibold mt-1 leading-snug max-w-[340px]">{p.cargo}</p>

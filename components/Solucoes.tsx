@@ -54,7 +54,7 @@ export default function Solucoes() {
           >
             Para cada momento do negócio,<br />uma solução.
           </h2>
-          <p className="text-[#5d6878] text-[18px] leading-[1.7] max-w-[620px]">
+          <p className="text-[#5d6878] text-[18px] leading-[1.7]">
             Toda empresa familiar tem sua própria história. As nossas soluções também.
           </p>
         </motion.div>
@@ -70,10 +70,10 @@ export default function Solucoes() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="rounded-[24px] border overflow-hidden transition-all duration-300"
+                className="rounded-[24px] overflow-hidden transition-all duration-300"
                 style={{
-                  borderColor: isOpen ? "rgba(246,41,130,0.20)" : "rgba(0,24,50,0.07)",
-                  background: isOpen ? "#fafbff" : "#ffffff",
+                  border: isOpen ? "2px solid rgba(255,255,255,0.14)" : "2px solid rgba(0,24,50,0.18)",
+                  background: isOpen ? "#001832" : "#ffffff",
                 }}
               >
                 <button
@@ -82,11 +82,19 @@ export default function Solucoes() {
                 >
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-1 flex-wrap">
-                      <span className="font-spartan font-bold text-navy text-[20px]">{s.label}</span>
+                      <span
+                        className="font-spartan font-bold text-[20px]"
+                        style={{ color: isOpen ? "#ffffff" : "#001832" }}
+                      >
+                        {s.label}
+                      </span>
                       {s.tag && (
                         <span
-                          className="text-[11px] font-bold px-3 py-1 rounded-full text-pink"
-                          style={{ background: "rgba(246,41,130,0.08)", border: "1px solid rgba(246,41,130,0.15)" }}
+                          className="text-[11px] font-bold px-3 py-1 rounded-full"
+                          style={isOpen
+                            ? { background: "rgba(246,41,130,0.25)", border: "1px solid rgba(246,41,130,0.5)", color: "#ff79ae" }
+                            : { background: "rgba(246,41,130,0.08)", border: "1px solid rgba(246,41,130,0.15)", color: "#f62982" }
+                          }
                         >
                           {s.tag}
                         </span>
@@ -97,8 +105,11 @@ export default function Solucoes() {
                     )}
                   </div>
                   <span
-                    className="text-pink text-[24px] font-light transition-transform duration-300 flex-shrink-0 mt-1"
-                    style={{ transform: isOpen ? "rotate(45deg)" : "none" }}
+                    className="text-[24px] font-light transition-transform duration-300 flex-shrink-0 mt-1"
+                    style={{
+                      color: isOpen ? "#ffffff" : "#f62982",
+                      transform: isOpen ? "rotate(45deg)" : "none",
+                    }}
                   >
                     +
                   </span>
@@ -116,10 +127,10 @@ export default function Solucoes() {
                       <div className="px-8 pb-8">
                         <div
                           className="w-full h-px mb-6"
-                          style={{ background: "rgba(246,41,130,0.12)" }}
+                          style={{ background: "rgba(255,255,255,0.14)" }}
                         />
                         {s.full.split("\n\n").map((p, j) => (
-                          <p key={j} className="text-[#5d6878] text-[16px] leading-[1.9] mb-4 last:mb-0">
+                          <p key={j} style={{ color: "rgba(255,255,255,0.82)", fontSize: 16, lineHeight: 1.9, marginBottom: 16 }}>
                             {p}
                           </p>
                         ))}
@@ -149,8 +160,18 @@ export default function Solucoes() {
             href={FORM_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 px-8 py-4 rounded-[16px] bg-pink text-white font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl whitespace-nowrap"
-            style={{ boxShadow: "0 8px 30px rgba(246,41,130,0.25)" }}
+            className="flex-shrink-0 px-8 py-4 rounded-[16px] text-white font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
+            style={{ background: "#f62982", boxShadow: "0 8px 30px rgba(246,41,130,0.25)" }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "linear-gradient(135deg,#001832 0%,#5b1c45 50%,#f62982 100%)";
+              el.style.boxShadow = "0 12px 35px rgba(246,41,130,0.35)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "#f62982";
+              el.style.boxShadow = "0 8px 30px rgba(246,41,130,0.25)";
+            }}
           >
             Preencher aplicação
           </a>
