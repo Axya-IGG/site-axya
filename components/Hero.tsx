@@ -5,17 +5,11 @@ import { motion } from "framer-motion";
 const WA_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20para%20empresas.";
 
 const headlines = [
-  "reduz rotatividade.",
-  "zera passivos\ntrabalhistas.",
-  "desenvolve lideranças.",
-  "aumenta produtividade.",
-  "profissionaliza operações.",
-];
-
-const credentials = [
-  "+30 anos de experiência combinada",
-  "Metodologia PPMF",
-  "Especialistas em empresas familiares",
+  "que reduz rotatividade.",
+  "que zera passivos\ntrabalhistas.",
+  "que desenvolve lideranças.",
+  "que aumenta produtividade.",
+  "que profissionaliza operações.",
 ];
 
 export default function Hero() {
@@ -34,27 +28,27 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="w-full min-h-screen flex items-center bg-white pt-24 pb-16 px-[5%]">
-      <div className="max-w-[1400px] mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
-        {/* Text */}
+    <section id="home" className="w-full min-h-screen flex bg-white overflow-hidden">
+      {/* Left: text column */}
+      <div className="flex-1 flex items-center pt-28 pb-16 px-[5%] md:px-[6%]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex flex-col items-start"
+          className="flex flex-col items-start max-w-[600px]"
         >
-          <span className="text-[12px] tracking-[2px] uppercase text-[#d42d7f] font-semibold mb-3 opacity-85">
-            Consultoria em Gestão de Pessoas para Empresas Familiares
+          <span className="text-[12px] tracking-[2px] uppercase text-[#d42d7f] font-semibold mb-3" style={{ opacity: 0.85 }}>
+            Consultoria Estratégica em Gestão de Pessoas
           </span>
           <h1
             className="font-spartan font-black text-navy mb-6"
-            style={{ fontSize: "clamp(42px, 5vw, 64px)", lineHeight: 0.94, letterSpacing: "-2px" }}
+            style={{ fontSize: "clamp(42px, 4.5vw, 62px)", lineHeight: 0.94, letterSpacing: "-2px" }}
           >
-            Gestão de pessoas que{" "}
+            Gestão de pessoas{" "}
             <span
               className="block"
               style={{
-                minHeight: "clamp(80px, 10vw, 120px)",
+                minHeight: "clamp(80px, 10vw, 115px)",
                 background: "linear-gradient(90deg,#001832 0%,#0b2444 35%,#5b1c45 75%,#d42d7f 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -68,10 +62,11 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-[15px] leading-[1.7] text-[#52606f] max-w-[540px] mb-8">
-            A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços.{" "}
-            <strong>Menos improviso com gente. Mais clareza, método e resultado.</strong>
+            A axya ajuda empresas familiares do setor de serviços a reduzir perdas financeiras,
+            fortalecer lideranças e estruturar operações mais sustentáveis através do{" "}
+            <strong>Método PPMF.</strong>
           </p>
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-wrap gap-3">
             <a
               href={WA_LINK}
               target="_blank"
@@ -87,50 +82,32 @@ export default function Hero() {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
               }}
             >
-              Diagnóstico gratuito
+              Agendar diagnóstico
             </a>
             <a
               href="#solu"
               className="px-[30px] py-[17px] rounded-2xl border border-navy/10 text-navy text-[14px] font-semibold transition-all duration-300 hover:border-[#d42d7f] hover:text-[#d42d7f]"
             >
-              Conheça nossas soluções
+              Conhecer método
             </a>
-          </div>
-
-          {/* Credentials bar */}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            {credentials.map((c, i) => (
-              <span key={i} className="flex items-center gap-2 text-[13px] text-[#5d6878] font-medium">
-                {i > 0 && <span className="w-1 h-1 rounded-full bg-pink inline-block" />}
-                {c}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Visual side */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="hidden md:flex items-center justify-center"
-        >
-          <div className="relative w-full max-w-[480px] aspect-square">
-            <div
-              className="absolute inset-0 rounded-[40px]"
-              style={{
-                background: "linear-gradient(135deg, #001832 0%, #0b2444 40%, #5b1c45 80%, #f62982 100%)",
-                opacity: 0.08,
-              }}
-            />
-            <img
-              src="https://axyaigg.com.br/wp-content/uploads/2026/05/Teste-4-3.png"
-              alt="axya Consultoria"
-              className="w-full h-full object-contain relative z-10 p-8"
-            />
           </div>
         </motion.div>
       </div>
+
+      {/* Right: photo — fills column, no box */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+        className="hidden md:block relative"
+        style={{ width: "45%", minHeight: "100vh" }}
+      >
+        <img
+          src="https://axyaigg.com.br/wp-content/uploads/2026/05/Teste-3.png"
+          alt="axya Consultoria"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+      </motion.div>
     </section>
   );
 }

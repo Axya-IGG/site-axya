@@ -106,7 +106,7 @@ export default function Dores() {
                 {d.title}
               </h3>
               {d.body.map((b, j) => (
-                <p key={j} className="text-white/72 text-[16px] leading-[1.9] mb-4">{b}</p>
+                <p key={j} style={{ color: "rgba(255,255,255,0.82)", fontSize: 16, lineHeight: 1.9, marginBottom: 16 }}>{b}</p>
               ))}
             </motion.div>
           ))}

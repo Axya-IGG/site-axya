@@ -5,7 +5,6 @@ import Solucoes from "@/components/Solucoes";
 import Pilares from "@/components/Pilares";
 import Estrutura from "@/components/Estrutura";
 import EmpresasFamiliares from "@/components/EmpresasFamiliares";
-import Posicionamento from "@/components/Posicionamento";
 import Dores from "@/components/Dores";
 import Valores from "@/components/Valores";
 import CTA from "@/components/CTA";
@@ -23,7 +22,6 @@ export default function Home() {
         <Pilares />
         <Estrutura />
         <EmpresasFamiliares />
-        <Posicionamento />
         <Dores />
         <Valores />
         <CTA />
