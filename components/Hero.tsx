@@ -28,9 +28,25 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="w-full min-h-screen flex bg-white overflow-hidden">
+    <section id="home" className="w-full min-h-screen relative bg-white overflow-hidden">
+      {/* Right: photo — absolutely fills right half top-to-bottom */}
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
+        className="hidden md:block absolute right-0 top-0 bottom-0"
+        style={{ width: "50%" }}
+      >
+        <img
+          src="/home-axya.png"
+          alt="axya Consultoria"
+          className="w-full h-full"
+          style={{ objectFit: "cover", objectPosition: "center top" }}
+        />
+      </motion.div>
+
       {/* Left: text column */}
-      <div className="flex-1 flex items-center pt-28 pb-16 px-[5%] md:px-[6%]">
+      <div className="relative z-10 w-full md:w-[50%] flex items-center min-h-screen pt-28 pb-16 px-[5%] md:px-[6%]">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +54,7 @@ export default function Hero() {
           className="flex flex-col items-start max-w-[600px]"
         >
           <span className="text-[12px] tracking-[2px] uppercase text-[#d42d7f] font-semibold mb-3" style={{ opacity: 0.85 }}>
-            Consultoria Estratégica em Gestão de Pessoas
+            Consultoria em Gestão de Pessoas para Empresas Familiares
           </span>
           <h1
             className="font-spartan font-black text-navy mb-6"
@@ -62,11 +78,10 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-[15px] leading-[1.7] text-[#52606f] max-w-[540px] mb-8">
-            A axya ajuda empresas familiares do setor de serviços a reduzir perdas financeiras,
-            fortalecer lideranças e estruturar operações mais sustentáveis através do{" "}
-            <strong>Método PPMF.</strong>
+            A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços.{" "}
+            <strong>Menos improviso com gente. Mais clareza, método e resultado.</strong>
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mb-8">
             <a
               href={WA_LINK}
               target="_blank"
@@ -82,32 +97,27 @@ export default function Hero() {
                 (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
               }}
             >
-              Agendar diagnóstico
+              Diagnóstico gratuito
             </a>
             <a
               href="#solu"
               className="px-[30px] py-[17px] rounded-2xl border border-navy/10 text-navy text-[14px] font-semibold transition-all duration-300 hover:border-[#d42d7f] hover:text-[#d42d7f]"
             >
-              Conhecer método
+              Conheça nossas soluções
             </a>
+          </div>
+
+          {/* Credentials bar */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            {["+30 anos de experiência combinada", "Metodologia PPMF", "Especialistas em empresas familiares"].map((c, i) => (
+              <span key={i} className="flex items-center gap-2 text-[13px] text-[#5d6878] font-medium">
+                {i > 0 && <span className="w-1 h-1 rounded-full bg-pink inline-block" />}
+                {c}
+              </span>
+            ))}
           </div>
         </motion.div>
       </div>
-
-      {/* Right: photo — fills column, no box */}
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
-        className="hidden md:block relative"
-        style={{ width: "45%", minHeight: "100vh" }}
-      >
-        <img
-          src="https://axyaigg.com.br/wp-content/uploads/2026/05/Teste-3.png"
-          alt="axya Consultoria"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-      </motion.div>
     </section>
   );
 }
