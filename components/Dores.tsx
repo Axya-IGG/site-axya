@@ -53,7 +53,7 @@ export default function Dores() {
       <div className="absolute top-[-80px] right-[-60px] w-80 h-80 rounded-full pointer-events-none" style={{ background: "#f62982", filter: "blur(100px)", opacity: 0.18 }} />
       <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full pointer-events-none" style={{ background: "#08d8ff", filter: "blur(100px)", opacity: 0.18 }} />
 
-      <div className="max-w-[1450px] mx-auto relative z-10 py-28">
+      <div className="max-w-[1450px] mx-auto relative z-10 py-16 md:py-28">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

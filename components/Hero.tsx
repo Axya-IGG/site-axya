@@ -42,6 +42,8 @@ export default function Hero() {
           alt="axya Consultoria"
           className="w-full h-full"
           style={{ objectFit: "cover", objectPosition: "center top" }}
+          fetchPriority="high"
+          loading="eager"
         />
       </motion.div>
 

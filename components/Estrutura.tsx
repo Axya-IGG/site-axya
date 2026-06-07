@@ -17,12 +17,12 @@ const floatingWords = [
 
 export default function Estrutura() {
   return (
-    <section className="w-full bg-white py-[140px] px-[6%] relative overflow-hidden">
+    <section className="w-full bg-white py-[80px] md:py-[140px] px-[6%] relative overflow-hidden">
       {/* Floating background words */}
       {floatingWords.map((w) => (
         <span
           key={w.text}
-          className={`absolute font-spartan font-black pointer-events-none select-none ${w.className}`}
+          className={`hidden md:block absolute font-spartan font-black pointer-events-none select-none ${w.className}`}
           style={{ color: "rgba(0,24,50,0.03)", ...w.style }}
         >
           {w.text}

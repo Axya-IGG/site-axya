@@ -29,6 +29,12 @@ export default function Header() {
 
   const closeMenu = () => setOpen(false);
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeMenu();
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
@@ -55,6 +61,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
+              onClick={link.label === "Home" ? handleHomeClick : undefined}
               className="text-[14px] font-semibold text-navy tracking-tight transition-colors duration-200 hover:text-pink"
             >
               {link.label}
@@ -100,7 +107,7 @@ export default function Header() {
           <a
             key={link.href}
             href={link.href}
-            onClick={closeMenu}
+            onClick={link.label === "Home" ? handleHomeClick : closeMenu}
             className="text-[15px] font-semibold text-navy py-4 border-b border-navy/5 transition-colors hover:text-pink"
           >
             {link.label}

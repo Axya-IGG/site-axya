@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
   background: #ffffff;
   color: #001832;
   overflow-x: hidden;
@@ -49,4 +47,4 @@ body {
 .animate-line-2 { animation: axyaMove 16s linear infinite; }
 .animate-line-3 { animation: axyaMove 20s linear infinite; }
 
-.font-spartan { font-family: 'League Spartan', sans-serif; }
+.font-spartan { font-family: var(--font-spartan), 'League Spartan', sans-serif; }

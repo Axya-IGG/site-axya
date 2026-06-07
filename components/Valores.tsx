@@ -30,7 +30,7 @@ const valores = [
 
 export default function Valores() {
   return (
-    <section className="w-full bg-white py-[120px] px-[5%]">
+    <section className="w-full bg-white py-16 md:py-[120px] px-[5%]">
       <div className="max-w-[1400px] mx-auto">
         {/* Header */}
         <motion.div

@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-const WA_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20para%20empresas.";
+const FORM_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20preencher%20uma%20aplica%C3%A7%C3%A3o.";
 
 export default function CTA() {
   return (
-    <section className="relative w-full bg-navy overflow-hidden py-[120px] px-[5%]">
+    <section className="relative w-full bg-navy overflow-hidden py-16 md:py-[120px] px-[5%]">
       {/* Moving lines */}
       <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
         {[
@@ -41,9 +41,9 @@ export default function CTA() {
           </span>
           <h2
             className="font-spartan font-black text-white"
-            style={{ fontSize: "clamp(36px,5vw,65px)", lineHeight: 0.92, letterSpacing: "-3px" }}
+            style={{ fontSize: "clamp(32px,4.5vw,58px)", lineHeight: 0.95, letterSpacing: "-2px" }}
           >
-            Empresas desorganizadas perdem dinheiro todos os dias sem perceber.
+            Sua empresa já está pagando o custo da falta de gestão. A pergunta é se você sabe quanto.
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function CTA() {
           className="flex justify-end md:justify-end"
         >
           <a
-            href={WA_LINK}
+            href={FORM_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="relative w-full max-w-[520px] min-h-[320px] rounded-[40px] p-[42px] flex flex-col justify-between overflow-hidden text-decoration-none transition-all duration-[450ms] hover:-translate-y-2 group"
@@ -76,7 +76,7 @@ export default function CTA() {
             />
 
             <span className="relative z-10 text-[13px] uppercase tracking-[2px] font-bold text-white/78">
-              Solicitar diagnóstico estratégico
+              Solicitar contato
             </span>
 
             <span className="relative z-10 font-spartan font-black text-white" style={{ fontSize: "clamp(30px,4vw,50px)", lineHeight: 0.95, letterSpacing: "-2px", maxWidth: 360 }}>
@@ -84,7 +84,7 @@ export default function CTA() {
             </span>
 
             <div className="relative z-10 flex items-center justify-between gap-5">
-              <span className="text-[16px] font-semibold text-white">Conversar com a Axya</span>
+              <span className="text-[16px] font-semibold text-white">Solicitar contato</span>
               <span
                 className="w-[74px] h-[74px] rounded-[24px] flex items-center justify-center text-white text-[34px] transition-transform duration-300 group-hover:translate-x-2"
                 style={{ background: "rgba(255,255,255,.14)", backdropFilter: "blur(12px)" }}

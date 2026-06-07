@@ -37,7 +37,7 @@ export default function Solucoes() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="solu" className="w-full bg-white py-[110px] px-[5%]">
+    <section id="solu" className="w-full bg-white py-16 md:py-[110px] px-[5%]">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <motion.div
@@ -160,17 +160,21 @@ export default function Solucoes() {
             href={FORM_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 px-8 py-4 rounded-[16px] text-white font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
-            style={{ background: "#f62982", boxShadow: "0 8px 30px rgba(246,41,130,0.25)" }}
+            className="flex-shrink-0 px-8 py-4 rounded-[16px] font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
+            style={{
+              background: "linear-gradient(#001832,#001832) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box",
+              border: "2px solid transparent",
+              color: "#ffffff",
+            }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "linear-gradient(135deg,#001832 0%,#5b1c45 50%,#f62982 100%)";
-              el.style.boxShadow = "0 12px 35px rgba(246,41,130,0.35)";
+              el.style.background = "linear-gradient(135deg,#08d8ff,#f62982) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
+              el.style.boxShadow = "0 12px 35px rgba(8,216,255,0.30)";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "#f62982";
-              el.style.boxShadow = "0 8px 30px rgba(246,41,130,0.25)";
+              el.style.background = "linear-gradient(#001832,#001832) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
+              el.style.boxShadow = "none";
             }}
           >
             Preencher aplicação

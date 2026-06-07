@@ -13,8 +13,8 @@ const config: Config = {
         cyan: "#08d8ff",
       },
       fontFamily: {
-        spartan: ["League Spartan", "sans-serif"],
-        sans: ["Open Sans", "sans-serif"],
+        spartan: ["var(--font-spartan)", "sans-serif"],
+        sans: ["var(--font-open-sans)", "sans-serif"],
       },
     },
   },

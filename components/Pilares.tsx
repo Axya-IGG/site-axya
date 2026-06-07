@@ -45,7 +45,7 @@ export default function Pilares() {
   return (
     <section id="ppmf" className="w-full bg-navy overflow-hidden">
       {/* ── Header ── */}
-      <div className="max-w-[1200px] mx-auto px-[5%] pt-[120px] pb-20 text-center">
+      <div className="max-w-[1200px] mx-auto px-[5%] pt-16 pb-10 md:pt-[120px] md:pb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Pilares() {
       </div>
 
       {/* ── Tabs + Content ── */}
-      <div className="max-w-[1200px] mx-auto px-[5%] pb-24">
+      <div className="max-w-[1200px] mx-auto px-[5%] pb-12 md:pb-24">
         {/* Tab menu */}
         <div className="flex flex-wrap gap-3 mb-12 justify-center">
           {pilares.map((p, i) => (
@@ -133,12 +133,11 @@ export default function Pilares() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="mx-[5%] mb-16 rounded-[32px] overflow-hidden flex flex-col md:flex-row"
-        style={{ background: "#ffffff", boxShadow: "0 20px 60px rgba(0,0,0,0.25)" }}
+        style={{ background: "linear-gradient(155deg,#001832 0%,#0b2444 45%,#5b1c45 100%)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
       >
         {/* Lado esquerdo — número destaque */}
         <div
           className="flex flex-col items-center justify-center px-12 py-12 flex-shrink-0 md:w-[280px]"
-          style={{ background: "linear-gradient(155deg,#001832 0%,#0b2444 45%,#5b1c45 100%)" }}
         >
           <span
             className="font-spartan font-black leading-none"
@@ -154,13 +153,17 @@ export default function Pilares() {
           <span className="text-white/60 text-[13px] font-semibold uppercase tracking-[2px] mt-1">critérios</span>
         </div>
 
+        {/* Separador vertical */}
+        <div className="hidden md:block w-px self-stretch" style={{ background: "rgba(255,255,255,0.10)", margin: "24px 0" }} />
+        <div className="block md:hidden h-px mx-10" style={{ background: "rgba(255,255,255,0.10)" }} />
+
         {/* Lado direito — texto */}
-        <div className="flex flex-col justify-center px-10 py-12 gap-4">
-          <p className="text-navy text-[18px] leading-[1.85] font-medium">
+        <div className="flex flex-col justify-center px-10 py-12 gap-4 rounded-[0_32px_32px_0] md:bg-white" style={{ flex: 1 }}>
+          <p className="text-white md:text-navy text-[18px] leading-[1.85] font-medium">
             Distribuídos nos quatro pilares, cada critério expõe um custo que a empresa ainda não consegue ver,
             mas já está pagando.
           </p>
-          <p className="text-[#5d6878] text-[16px] leading-[1.85]">
+          <p className="text-white/70 md:text-[#5d6878] text-[16px] leading-[1.85]">
             Saber em qual pilar está o problema, com qual gravidade e por onde começar: isso é o que o Diagnóstico PPMF faz.
           </p>
         </div>
@@ -172,7 +175,7 @@ export default function Pilares() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="mx-[5%] mb-[120px] rounded-[32px] overflow-hidden"
+        className="mx-[5%] mb-16 md:mb-[120px] rounded-[32px] overflow-hidden"
         style={{ background: "linear-gradient(135deg,#0b2444 0%,#5b1c45 55%,#f62982 100%)" }}
       >
         <div className="px-10 md:px-16 py-14 flex flex-col md:flex-row items-start md:items-center gap-10">
@@ -194,17 +197,19 @@ export default function Pilares() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 px-8 py-5 rounded-[18px] font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
-            style={{ background: "#ffffff", color: "#001832" }}
+            style={{
+              background: "linear-gradient(#0b2444,#0b2444) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box",
+              border: "2px solid transparent",
+              color: "#ffffff",
+            }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "linear-gradient(135deg,#f62982 0%,#08d8ff 100%)";
-              el.style.color = "#ffffff";
-              el.style.boxShadow = "0 12px 35px rgba(246,41,130,0.35)";
+              el.style.background = "linear-gradient(135deg,#08d8ff,#f62982) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
+              el.style.boxShadow = "0 12px 35px rgba(8,216,255,0.30)";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "#ffffff";
-              el.style.color = "#001832";
+              el.style.background = "linear-gradient(#0b2444,#0b2444) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
               el.style.boxShadow = "none";
             }}
           >

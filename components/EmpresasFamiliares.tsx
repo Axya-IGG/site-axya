@@ -44,7 +44,7 @@ export default function EmpresasFamiliares() {
 
   return (
     <section ref={ref} className="w-full bg-white py-24 px-[6%]">
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-20 items-start">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
         {/* Empresas Familiares */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
