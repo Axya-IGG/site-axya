@@ -48,7 +48,7 @@ const dores = [
 
 export default function Dores() {
   return (
-    <section className="w-full bg-navy relative overflow-hidden py-0 px-[1%]">
+    <section className="w-full bg-navy relative overflow-hidden py-0 px-4 md:px-[1%]">
       {/* Blur orbs */}
       <div className="absolute top-[-80px] right-[-60px] w-80 h-80 rounded-full pointer-events-none" style={{ background: "#f62982", filter: "blur(100px)", opacity: 0.18 }} />
       <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full pointer-events-none" style={{ background: "#08d8ff", filter: "blur(100px)", opacity: 0.18 }} />
@@ -118,15 +118,17 @@ export default function Dores() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-24 pt-12 text-center flex flex-col gap-3"
+          className="mt-16 md:mt-24 pt-10 md:pt-12 text-center flex flex-col gap-3 px-4 md:px-0"
           style={{ borderTop: "1px solid rgba(255,255,255,.08)" }}
         >
-          <span className="text-white/65 text-[22px] font-light">Empresas não travam apenas por falta de estratégia.</span>
+          <span className="text-white/65 text-[18px] md:text-[22px] font-light">
+            Empresas não travam apenas por<br className="md:hidden" /> falta de estratégia.
+          </span>
           <strong
             className="font-spartan font-black text-white"
-            style={{ fontSize: "clamp(32px,4vw,52px)", lineHeight: 1, letterSpacing: "-2px" }}
+            style={{ fontSize: "clamp(26px,4vw,52px)", lineHeight: 1.05, letterSpacing: "-2px" }}
           >
-            Travam por falta de estrutura humana.
+            Travam por falta de<br className="md:hidden" /> estrutura humana.
           </strong>
         </motion.div>
       </div>

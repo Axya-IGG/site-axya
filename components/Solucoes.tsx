@@ -50,9 +50,9 @@ export default function Solucoes() {
           <span className="text-pink text-[12px] font-bold uppercase tracking-[2px] mb-4 block">Nossas Soluções</span>
           <h2
             className="font-spartan font-black text-navy mb-4"
-            style={{ fontSize: "clamp(32px,4vw,54px)", lineHeight: 0.95, letterSpacing: "-2px" }}
+            style={{ fontSize: "clamp(22px,4vw,54px)", lineHeight: 0.95, letterSpacing: "-2px" }}
           >
-            Para cada momento do negócio,<br />uma solução.
+            Para cada momento do negócio,<br className="hidden md:block" />uma solução.
           </h2>
           <p className="text-[#5d6878] text-[18px] leading-[1.7]">
             Toda empresa familiar tem sua própria história. As nossas soluções também.

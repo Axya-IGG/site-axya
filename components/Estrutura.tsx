@@ -59,7 +59,7 @@ export default function Estrutura() {
           </motion.div>
 
           {/* Cards grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-3 md:gap-6">
             {cards.map((card, i) => (
               <motion.div
                 key={i}
@@ -67,7 +67,7 @@ export default function Estrutura() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white border border-navy/5 rounded-[30px] p-[34px] relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-pink/10"
+                className="bg-white border border-navy/5 rounded-[20px] md:rounded-[30px] p-4 md:p-[34px] relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-pink/10"
                 style={{ boxShadow: "0 10px 30px rgba(0,24,50,0.03)" }}
               >
                 {/* Top gradient line */}
@@ -75,8 +75,8 @@ export default function Estrutura() {
                   className="absolute top-0 left-0 right-0 h-1"
                   style={{ background: "linear-gradient(90deg, #08d8ff, #f62982)" }}
                 />
-                <h3 className="font-spartan font-bold text-navy text-[28px] leading-tight mb-4">{card.title}</h3>
-                <span className="text-[#687385] text-[16px] leading-[1.7]">{card.text}</span>
+                <h3 className="font-spartan font-bold text-navy text-[16px] md:text-[28px] leading-tight mb-2 md:mb-4">{card.title}</h3>
+                <span className="text-[#687385] text-[12px] md:text-[16px] leading-[1.6]">{card.text}</span>
               </motion.div>
             ))}
           </div>
