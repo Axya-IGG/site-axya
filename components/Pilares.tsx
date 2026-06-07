@@ -8,7 +8,7 @@ const pilares = [
   {
     label: "Lideranças",
     title: "Lideranças mais preparadas geram empresas mais sustentáveis.",
-    text: "A Axya ajuda empresas a desenvolver lideranças mais estratégicas, alinhadas e capazes de conduzir equipes com mais clareza, cultura e resultado.",
+    text: "A axya ajuda empresas a desenvolver lideranças mais estratégicas, alinhadas e capazes de conduzir equipes com mais clareza, cultura e resultado.",
     image: "https://axyaigg.com.br/wp-content/uploads/2026/05/Teste-1.png",
   },
   {
@@ -35,14 +35,18 @@ export default function Pilares() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="solu" className="w-full bg-navy py-[130px] px-[6%] overflow-hidden">
+    <section id="ppmf" className="w-full bg-navy py-[130px] px-[6%] overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-pink text-[12px] font-bold uppercase tracking-[2px] mb-4">Soluções Estratégicas</p>
+          <p className="text-pink text-[12px] font-bold uppercase tracking-[2px] mb-4">Método PPMF</p>
           <h2 className="font-spartan font-black text-white mb-4" style={{ fontSize: "clamp(32px,4vw,48px)", lineHeight: 1, letterSpacing: "-2px" }}>
-            Como ajudamos empresas a crescer com mais estrutura e clareza.
+            Método PPMF. Nosso jeito de fazer.
           </h2>
+          <p className="text-white/65 text-[17px] max-w-[640px] mx-auto leading-[1.75]">
+            O modelo de diagnóstico e solução para gestão de pessoas desenvolvido pela axya.<br />
+            <span className="text-white/45 text-[15px]">Todo problema de gestão de pessoas se conecta a um dos quatro pilares do PPMF. É por eles que começamos.</span>
+          </p>
         </div>
 
         <div className="grid gap-16" style={{ gridTemplateColumns: "1.1fr 0.7fr 1fr" }}>

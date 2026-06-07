@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Axya IGG — Especialista em Gente e Gestão",
-  description: "A Axya ajuda empresas familiares do setor de serviços a reduzir perdas financeiras, fortalecer lideranças e estruturar operações mais sustentáveis através do Método PPMF.",
+  title: "axya — Inteligência em Gente e Gestão",
+  description: "A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços. Menos improviso com gente. Mais clareza, método e resultado.",
   icons: {
     icon: "https://axyaigg.com.br/wp-content/uploads/2025/10/cropped-cropped-X-Padrao-scaled-2-32x32.png",
   },

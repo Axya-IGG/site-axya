@@ -5,10 +5,17 @@ import { motion } from "framer-motion";
 const WA_LINK = "https://wa.me/5512997205261?text=Vi%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20para%20empresas.";
 
 const headlines = [
-  "que sustenta\ncrescimento.",
-  "que reduz\nperdas invisíveis.",
-  "que fortalece\nlideranças.",
-  "que profissionaliza\noperações.",
+  "reduz rotatividade.",
+  "zera passivos\ntrabalhistas.",
+  "desenvolve lideranças.",
+  "aumenta produtividade.",
+  "profissionaliza operações.",
+];
+
+const credentials = [
+  "+30 anos de experiência combinada",
+  "Metodologia PPMF",
+  "Especialistas em empresas familiares",
 ];
 
 export default function Hero() {
@@ -37,13 +44,13 @@ export default function Hero() {
           className="flex flex-col items-start"
         >
           <span className="text-[12px] tracking-[2px] uppercase text-[#d42d7f] font-semibold mb-3 opacity-85">
-            Consultoria Estratégica em Gestão de Pessoas
+            Consultoria em Gestão de Pessoas para Empresas Familiares
           </span>
           <h1
             className="font-spartan font-black text-navy mb-6"
             style={{ fontSize: "clamp(42px, 5vw, 64px)", lineHeight: 0.94, letterSpacing: "-2px" }}
           >
-            Gestão de pessoas{" "}
+            Gestão de pessoas que{" "}
             <span
               className="block"
               style={{
@@ -61,35 +68,43 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-[15px] leading-[1.7] text-[#52606f] max-w-[540px] mb-8">
-            A Axya ajuda empresas familiares do setor de serviços a reduzir perdas financeiras,
-            fortalecer lideranças e estruturar operações mais sustentáveis através do{" "}
-            <strong>Método PPMF.</strong>
+            A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços.{" "}
+            <strong>Menos improviso com gente. Mais clareza, método e resultado.</strong>
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 mb-10">
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-[30px] py-[17px] rounded-2xl bg-navy text-white text-[14px] font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{ boxShadow: "0 0 0 transparent" }}
+              className="px-[30px] py-[17px] rounded-2xl bg-navy text-white text-[14px] font-semibold transition-all duration-300 hover:-translate-y-1"
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.background =
                   "linear-gradient(135deg,#7d1d5a 0%,#b32672 45%,#d42d7f 100%)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 35px rgba(212,45,127,0.22)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.background = "#001832";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
               }}
             >
-              Agendar diagnóstico
+              Diagnóstico gratuito
             </a>
             <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#solu"
               className="px-[30px] py-[17px] rounded-2xl border border-navy/10 text-navy text-[14px] font-semibold transition-all duration-300 hover:border-[#d42d7f] hover:text-[#d42d7f]"
             >
-              Conhecer método
+              Conheça nossas soluções
             </a>
+          </div>
+
+          {/* Credentials bar */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            {credentials.map((c, i) => (
+              <span key={i} className="flex items-center gap-2 text-[13px] text-[#5d6878] font-medium">
+                {i > 0 && <span className="w-1 h-1 rounded-full bg-pink inline-block" />}
+                {c}
+              </span>
+            ))}
           </div>
         </motion.div>
 
@@ -110,7 +125,7 @@ export default function Hero() {
             />
             <img
               src="https://axyaigg.com.br/wp-content/uploads/2026/05/Teste-4-3.png"
-              alt="Axya Consultoria"
+              alt="axya Consultoria"
               className="w-full h-full object-contain relative z-10 p-8"
             />
           </div>
