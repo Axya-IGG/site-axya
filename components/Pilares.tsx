@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const DIAG_LINK = "https://axyaigg.com.br/diagnostico-ppmf";
-
 const pilares = [
   {
     label: "Pessoas",
@@ -132,7 +130,7 @@ export default function Pilares() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mx-[5%] mb-16 rounded-[32px] overflow-hidden flex flex-col md:flex-row"
+        className="mx-[5%] mb-16 md:mb-[120px] rounded-[32px] overflow-hidden flex flex-col md:flex-row"
         style={{ background: "linear-gradient(155deg,#001832 0%,#0b2444 45%,#5b1c45 100%)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
       >
         {/* Lado esquerdo — número destaque */}
@@ -160,80 +158,11 @@ export default function Pilares() {
         {/* Lado direito — texto */}
         <div className="flex flex-col justify-center px-10 py-12 gap-4 rounded-[0_32px_32px_0] md:bg-white" style={{ flex: 1 }}>
           <p className="text-white md:text-navy text-[18px] leading-[1.85] font-medium">
-            O PPMF avalia 36 critérios distribuídos nesses quatro pilares. Foi a partir dele que criamos o Diagnóstico PPMF: uma ferramenta gratuita para que donos e gestores consigam enxergar, com clareza, onde estão as maiores perdas do negócio e por onde começar a agir.
+            O PPMF avalia 36 critérios distribuídos nesses quatro pilares. Assim, donos e gestores enxergam com clareza onde estão as maiores perdas do negócio e por onde começar a agir.
           </p>
         </div>
       </motion.div>
 
-      {/* ── Card do Diagnóstico PPMF ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="mx-[5%] mb-16 md:mb-[120px] rounded-[32px] overflow-hidden"
-        style={{ background: "linear-gradient(135deg,#0b2444 0%,#5b1c45 55%,#f62982 100%)" }}
-      >
-        <div className="px-10 md:px-16 py-14 flex flex-col gap-8">
-          <div className="flex flex-col md:flex-row items-start gap-8">
-            <div className="flex-1">
-              <p
-                className="font-spartan font-bold text-white mb-4"
-                style={{ fontSize: "clamp(22px,2.5vw,32px)", lineHeight: 1.1 }}
-              >
-                Pare de perder antes de tentar crescer.
-              </p>
-              <p className="text-white/80 text-[16px] leading-[1.85]">
-                Falar em aumentar lucratividade sem antes identificar onde o negócio está perdendo dinheiro é tentar encher um balde furado.
-                O Diagnóstico PPMF foi criado para isso:{" "}
-                <strong className="text-white">dar visibilidade ao que está custando caro e ninguém está vendo.</strong>
-              </p>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              "O nível de maturidade da gestão de pessoas da sua empresa",
-              "Os custos invisíveis gerados por falhas em pessoas e processos",
-              "Estimativas de perdas anuais: rotatividade, produtividade e passivo trabalhista",
-              "Os 3 pontos críticos que precisam da sua atenção agora",
-              "Diagnóstico de risco NR-1 incluso",
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold" style={{ background: "rgba(8,216,255,0.2)", color: "#08d8ff" }}>✓</span>
-                <span className="text-white/75 text-[14px] leading-[1.7]">Em menos de 15 minutos, você recebe: <strong className="text-white">{item}</strong></span>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 pt-2">
-            <p className="text-white/60 text-[14px]">Gratuito. O relatório é gerado na hora.</p>
-            <a
-              href={DIAG_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 px-8 py-4 rounded-[16px] font-bold text-[15px] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap"
-              style={{
-                background: "linear-gradient(#0b2444,#0b2444) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box",
-                border: "2px solid transparent",
-                color: "#ffffff",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "linear-gradient(135deg,#08d8ff,#f62982) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
-                el.style.boxShadow = "0 12px 35px rgba(8,216,255,0.30)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "linear-gradient(#0b2444,#0b2444) padding-box, linear-gradient(135deg,#08d8ff,#f62982) border-box";
-                el.style.boxShadow = "none";
-              }}
-            >
-              Iniciar meu diagnóstico gratuito
-            </a>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

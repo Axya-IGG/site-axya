@@ -17,14 +17,14 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "axya — Inteligência em Gente e Gestão",
+  title: "axya - Inteligência em Gente e Gestão",
   description:
     "A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços. Menos improviso com gente. Mais clareza, método e resultado.",
   icons: {
     icon: "/favicon-axya.png",
   },
   openGraph: {
-    title: "axya — Inteligência em Gente e Gestão",
+    title: "axya - Inteligência em Gente e Gestão",
     description:
       "A axya estrutura a gestão de pessoas de empresas familiares do setor de serviços. Menos improviso com gente. Mais clareza, método e resultado.",
     url: "https://axyaigg.com.br",

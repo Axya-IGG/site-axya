@@ -2,7 +2,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const DIAG_LINK = "https://axyaigg.com.br/diagnostico-ppmf";
+const openForm = () => {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event("openLeadForm"));
+};
 
 const headlines = [
   "que reduz rotatividade.",
@@ -84,23 +86,22 @@ export default function Hero() {
             <strong>Menos improviso. Mais clareza, método e resultado.</strong>
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
-            <a
-              href={DIAG_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={openForm}
               className="px-[30px] py-[17px] rounded-2xl bg-navy text-white text-[14px] font-semibold transition-all duration-300 hover:-translate-y-1"
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background =
+                (e.currentTarget as HTMLButtonElement).style.background =
                   "linear-gradient(135deg,#7d1d5a 0%,#b32672 45%,#d42d7f 100%)";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 35px rgba(212,45,127,0.22)";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 12px 35px rgba(212,45,127,0.22)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "#001832";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+                (e.currentTarget as HTMLButtonElement).style.background = "#001832";
+                (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
               }}
             >
-              Diagnóstico gratuito
-            </a>
+              Fale com a gente
+            </button>
             <a
               href="#solu"
               className="px-[30px] py-[17px] rounded-2xl border border-navy/10 text-navy text-[14px] font-semibold transition-all duration-300 hover:border-[#d42d7f] hover:text-[#d42d7f]"
