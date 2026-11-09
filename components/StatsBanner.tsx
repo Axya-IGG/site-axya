@@ -1,7 +1,7 @@
 "use client";
 
 const stats = [
-  { em: "56%", text: "de aumento no turnover no Brasil — maior taxa do mundo.", source: "Robert Half" },
+  { em: "56%", text: "de aumento no turnover no Brasil, a maior taxa do mundo.", source: "Robert Half" },
   { em: "8 em cada 10", text: "pessoas deixam a empresa por causa do líder, não da empresa.", source: "Michael Page" },
   { em: "56%", text: "dos funcionários brasileiros estão desengajados no trabalho.", source: "Engaja S/A · FGV 2024" },
   { em: "75%", text: "dos profissionais fizeram quiet quitting nos últimos 3 meses.", source: "Engaja S/A 2024" },

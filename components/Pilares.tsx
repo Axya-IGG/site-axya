@@ -133,7 +133,7 @@ export default function Pilares() {
         className="mx-[5%] mb-16 md:mb-[120px] rounded-[32px] overflow-hidden flex flex-col md:flex-row"
         style={{ background: "linear-gradient(155deg,#001832 0%,#0b2444 45%,#5b1c45 100%)", boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}
       >
-        {/* Lado esquerdo — número destaque */}
+        {/* Lado esquerdo: número destaque */}
         <div
           className="flex flex-col items-center justify-center px-12 py-12 flex-shrink-0 md:w-[280px]"
         >
@@ -155,7 +155,7 @@ export default function Pilares() {
         <div className="hidden md:block w-px self-stretch" style={{ background: "rgba(255,255,255,0.10)", margin: "24px 0" }} />
         <div className="block md:hidden h-px mx-10" style={{ background: "rgba(255,255,255,0.10)" }} />
 
-        {/* Lado direito — texto */}
+        {/* Lado direito: texto */}
         <div className="flex flex-col justify-center px-10 py-12 gap-4 rounded-[0_32px_32px_0] md:bg-white" style={{ flex: 1 }}>
           <p className="text-white md:text-navy text-[18px] leading-[1.85] font-medium">
             O PPMF avalia 36 critérios distribuídos nesses quatro pilares. Assim, donos e gestores enxergam com clareza onde estão as maiores perdas do negócio e por onde começar a agir.

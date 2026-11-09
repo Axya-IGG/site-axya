@@ -129,7 +129,7 @@ export default function FormPopup() {
   return (
     <AnimatePresence>
       {open && (
-        /* Full-screen overlay — pointer events block background interaction */
+        /* Full-screen overlay: pointer events block background interaction */
         <motion.div
           key="overlay"
           initial={{ opacity: 0 }}

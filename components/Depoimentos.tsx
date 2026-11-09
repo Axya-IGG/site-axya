@@ -6,7 +6,7 @@ const depoimentos = [
     titulo: "Recomendo com total confiança.",
     texto: "Trabalhei com Luciana e Kathleen e sempre admirei a competência, a sensibilidade e o profissionalismo das duas. Elas unem cuidado genuíno com pessoas e uma capacidade incrível de transformar ambientes e processos.",
     destaque: "Recomendo com total confiança",
-    textoPos: " — quem contar com o trabalho delas estará em excelentes mãos.",
+    textoPos: ". Quem contar com o trabalho delas estará em excelentes mãos.",
     nome: "Carla Davidovich",
     foto: "/carla.jpg.jpeg",
     iniciais: "C",

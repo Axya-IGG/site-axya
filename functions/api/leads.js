@@ -2,7 +2,7 @@
 //
 // O destino é o Axya Flow (aba "Leads"), que substituiu o painel /admin daqui.
 // Este endpoint continua existindo porque é o endereço que o formulário do site
-// já usa — quem mudou foi só o que acontece com o lead depois.
+// já usa. Quem mudou foi só o que acontece com o lead depois.
 //
 // O KV (LEADS_KV) deixou de ser a base: virou FILA DE RECUPERAÇÃO. Ele só é
 // escrito quando o envio ao Flow falha, sob uma chave própria
@@ -10,7 +10,7 @@
 //
 // Por que a fila existe: o formulário do site mostra "sucesso" mesmo quando o
 // envio falha (o fetch dele está dentro de um try/catch que engole o erro). Sem
-// a fila, uma indisponibilidade do Flow perderia o lead sem ninguém perceber —
+// a fila, uma indisponibilidade do Flow perderia o lead sem ninguém perceber,
 // e lead perdido é dinheiro perdido, não bug de tela.
 //
 // O endereço é o da ORIGEM (flow-origin, DNS-only) e não axyaigg.com.br/flow:

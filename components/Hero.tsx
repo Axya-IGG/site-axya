@@ -31,7 +31,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="w-full min-h-screen relative bg-white overflow-hidden">
-      {/* Right: photo — absolutely fills right half top-to-bottom */}
+      {/* Right: photo, absolutely fills right half top-to-bottom */}
       <motion.div
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}

@@ -49,7 +49,7 @@ export default function CTA() {
           </h2>
         </motion.div>
 
-        {/* Right — CTA card */}
+        {/* Right: CTA card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function CTA() {
               boxShadow: "0 35px 90px rgba(0,24,50,.18)",
             }}
           >
-            {/* Glow orb — subtle cyan tint */}
+            {/* Glow orb: subtle cyan tint */}
             <span
               className="absolute w-64 h-64 rounded-full pointer-events-none transition-transform duration-500 group-hover:scale-125"
               style={{

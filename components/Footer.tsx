@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/8 pt-6">
-          <p className="text-white/35 text-[12px]">Axya IGG. © Todos os Direitos Reservados – 2026</p>
+          <p className="text-white/35 text-[12px]">Axya IGG. © Todos os Direitos Reservados, 2026</p>
         </div>
       </div>
     </footer>

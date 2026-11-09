@@ -106,7 +106,7 @@ export default function EmpresasFamiliares() {
               Setor de serviços<br />no Brasil.
             </h3>
 
-            {/* Stat cards — 2 colunas */}
+            {/* Stat cards: 2 colunas */}
             <div className="grid grid-cols-2 gap-4 mb-4">
               {servicosStats.map((s) => (
                 <div key={s.label} className="bg-navy rounded-[20px] p-6 text-white">
@@ -133,7 +133,7 @@ export default function EmpresasFamiliares() {
               </svg>
             </div>
 
-            {/* Cards inferiores — 2 colunas */}
+            {/* Cards inferiores: 2 colunas */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-navy rounded-[20px] p-6 flex items-center justify-between gap-3">
                 <p className="text-white text-[14px] font-medium leading-tight">Alta carga tributária</p>

@@ -9,7 +9,7 @@ import { useEffect } from "react";
 // o painel caiu.
 //
 // O site é exportado como estático (output: "export"), então o redirecionamento
-// é feito no cliente — não há servidor aqui para devolver um 302.
+// é feito no cliente, porque não há servidor aqui para devolver um 302.
 
 const PAINEL = "https://axyaigg.com.br/flow/leads";
 const NAVY = "#001832";
